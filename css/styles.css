@@ -1,0 +1,128 @@
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--pale-blue);
+}
+
+.card {
+    margin: 20px;
+    border-radius: 17px;
+    overflow: hidden;
+    background-color: #fff;
+    font-family: 'Red Hat Display', sans-serif;
+    max-width: 400px;
+}
+
+.description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    text-align: center;
+    gap: 1rem;
+}
+
+h1 {
+    margin: 0;
+    color: var(--dark-blue);
+    font-size: 1.5rem;  
+    font-weight: 900;
+}
+
+.description {
+    color: var(--desaturated-blue);
+    font-size: 0.9rem;
+}
+
+.plan-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap ;
+    align-items: center;
+    background-color: var(--very-pale-blue);
+    border-radius: 10px;
+    padding: 0.8rem;
+    width: 100%;
+}
+
+.prices-container {
+    text-align: left;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+}
+
+.prices-container b {
+    color: var(--dark-blue);
+    font-weight: 800;
+}
+
+.prices-container i {
+    color: var(--desaturated-blue);
+    font-weight: 500;
+}
+
+a {
+    text-align: right;
+    flex-grow: 1;
+    color: var(--bright-blue);
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+a:hover {
+    cursor: pointer;
+    color: hsla(245, 75%, 52%, 0.678);
+}
+
+.button {
+    background-color: var(--bright-blue);
+    border-radius: 10px;
+    color: #fff;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 1rem 15px hsl(245, 56%, 87%);
+    transition: background-color 0.2s;
+    font-size: 0.9rem;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color:hsla(245, 75%, 52%, 0.678);
+}
+.cancel-button {
+    color: var(--desaturated-blue);
+    padding: 0.2rem;
+    font-weight: 600;
+    transition: color 0.2s;
+    font-size: 0.9rem;
+}
+
+.cancel-button:hover {
+    cursor: pointer;
+    color: var(--dark-blue);
+}
+
+@media screen and (max-width:325px) {
+    .plan-container {
+        justify-content: center;
+        text-align: center;
+        gap: 0.3rem;
+    }
+    a {
+        text-align: center;
+    }
+}
